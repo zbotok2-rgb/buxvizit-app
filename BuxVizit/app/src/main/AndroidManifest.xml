@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yourapp.buxvizit">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:label="Bux-vizit"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name=".LAUNCHER_GREEN"
+            android:enabled="true"
+            android:exported="true"
+            android:targetActivity=".MainActivity"
+            android:icon="@drawable/ic_green"
+            android:label="Bux-vizit">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".LAUNCHER_ORANGE"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity=".MainActivity"
+            android:icon="@drawable/ic_orange"
+            android:label="Bux-vizit">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <receiver android:name=".IconToggleReceiver" android:exported="true"/>
+    </application>
+</manifest>
